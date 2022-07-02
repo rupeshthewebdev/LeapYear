@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Check Leap Year</title>
+    <style>
+
+       *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+
+       body{
+        background-color: rgb(224, 215, 215);
+       }
+
+       .heading{
+        background-color: palevioletred;
+        text-align: center;
+        width: 100%;
+        padding: 1%;
+        margin-bottom: 10%;
+       }
+       
+       .maindiv {
+        display: flex;
+        justify-content: center;
+       }
+
+       .flexdiv {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+        background-color:palevioletred;
+       }
+
+       label,input,button,p{
+        text-align: center;
+       }
+
+       label{
+        margin: 15%;
+       }
+
+       input,p{
+        margin:0% 2% 10% 2%;
+       }
+
+       button{
+        margin: 0% 0% 10% 35%;
+        width: 25%;
+       }
+
+    </style>
+  </head>
+  <body>
+    <h1 class="heading">Check Leap Year</h1>
+    <div class="maindiv">
+    <div class="flexdiv">
+    <label>Enter the Year:</label>
+    <input id="year" />
+    <button onclick="checkLeap()">Check</button>
+    <p id="para"></p>
+</div>
+</div>
+
+    <script>
+      var year;
+      function checkLeap() {
+        year = parseInt(document.getElementById("year").value);
+          if (year % 4 == 0 && year % 100 != 0){
+            document.getElementById("para").innerHTML = "It is a Leap Year";
+          }
+          else if (year % 400 == 0){
+            document.getElementById("para").innerHTML = "It is a Leap Year";
+          }
+          else{
+            document.getElementById("para").innerHTML = "It is not a Leap Year";
+          }
+        }
+    </script>
+  </body>
+</html>
